@@ -6,10 +6,22 @@
  */
 
 import React from 'react';
-import HomeScreen from './src/HomeScreen';
+import {NavigationContainer} from '@react-navigation/native';
+// import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import TabNavigator from './src/Navigation/TabNavigator';
+
+// const Tab = createBottomTabNavigator();
 
 function App(): JSX.Element {
-  return <HomeScreen />;
+  return (
+    <NavigationContainer>
+      <TabNavigator />
+      {/* <Tab.Navigator>
+        <Tab.Screen name="Home" component={HomeStack} />
+        <Tab.Screen name="Settings" component={SettingsStack} />
+      </Tab.Navigator> */}
+    </NavigationContainer>
+  );
 }
 
 export default App;
